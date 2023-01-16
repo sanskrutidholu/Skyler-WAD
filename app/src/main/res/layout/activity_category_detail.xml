@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_ctgr_detail_text"
+    tools:context=".activities.CategoryDetailActivity">
+
+    <ScrollView
+        android:id="@+id/ctgrDetail_llBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="top"
+        android:background="@mipmap/ic_launcher">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/bg_ctgr_detail_text">
+
+            <TextView
+                android:id="@+id/ctgrDetail_tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title Here"
+                android:padding="20dp"
+                android:gravity="center|bottom"
+                android:background="@drawable/bg_ctgr_detail_title"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/calibril"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_ctgr_detail_text">
+
+                <TextView
+                    android:id="@+id/ctgrDetail_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Service Charge: "
+                    android:paddingVertical="20dp"
+                    android:paddingLeft="20dp"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/calibril"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/ctgrDetail_tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 0/-"
+                    android:paddingVertical="20dp"
+                    android:paddingRight="20dp"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/calibril"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Specification: "
+                android:paddingVertical="20dp"
+                android:paddingLeft="20dp"
+                android:textColor="@color/colorLogoLight"
+                android:fontFamily="@font/calibril"
+                android:textSize="20sp"
+                android:gravity="left"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/ctgrDetail_tvDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/calibril"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/ctgrDetail_btnAddCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/calibrib"
+        android:text="Add"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+</RelativeLayout>

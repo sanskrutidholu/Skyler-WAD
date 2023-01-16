@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CartService_DetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_serviceDetails"
+        android:visibility="visible"
+        android:layout_above="@id/ll_next"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_service"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_margin = "10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back"
+                android:src="@drawable/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_detailName"
+                android:text="Service Details"
+                android:textSize="20dp"
+                android:layout_marginStart="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorEditTextBg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@id/ll_service"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:src="@drawable/step1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_serviceDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_next"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:weightSum="2"
+        android:paddingHorizontal="15dp"
+        android:layout_margin = "10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_next"
+            android:text="NEXT ->"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:background="@color/colorLogoDark"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/hide"
+    tools:context=".activities.SavedLocationActivity">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/whiteback" />
+
+        <TextView
+            android:id="@+id/tv_cName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginStart="20dp"
+            android:text="Saved Locations"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_locations"
+        android:layout_below="@id/ll"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_locations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_address"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorBlink"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="+ Add Address"
+            android:gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="35dp"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/fl_addressForm"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@id/ll_address"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:id="@+id/back2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/leftarrow" />
+
+
+                        <TextView
+                            android:layout_toRightOf="@id/back2"
+                            android:text="ADD ADDRESS"
+                            android:gravity="center"
+                            android:textSize="20dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:background="@drawable/search_bg_white"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="10dp">
+
+                        <EditText
+                            android:id="@+id/pincodeEt"
+                            android:textSize="15dp"
+                            android:padding="5dp"
+                            android:background="@null"
+                            android:inputType="number"
+                            android:hint="Pincode (Requires)*"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="15dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:padding="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/search_bg_white"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/stateEt"
+                                android:textSize="15dp"
+                                android:padding="5dp"
+                                android:background="@null"
+                                android:inputType="text"
+                                android:hint="State (Requires)*"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/search_bg_white"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp">
+
+                            <EditText
+                                android:id="@+id/cityEt"
+                                android:textSize="15dp"
+                                android:padding="5dp"
+                                android:background="@null"
+                                android:inputType="text"
+                                android:hint="City(Requires)*"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:background="@drawable/search_bg_white"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginHorizontal="10dp">
+
+                        <EditText
+                            android:id="@+id/houseNoEt"
+                            android:textSize="15dp"
+                            android:padding="5dp"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:hint="House no, Building name (Requires)*"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:background="@drawable/search_bg_white"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginHorizontal="10dp">
+
+                        <EditText
+                            android:id="@+id/areaEt"
+                            android:textSize="15dp"
+                            android:padding="5dp"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:hint="Road name, Area, Colony (Requires)*"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:background="@drawable/search_bg_white"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginHorizontal="10dp">
+
+                        <EditText
+                            android:id="@+id/tageEt"
+                            android:textSize="15dp"
+                            android:padding="5dp"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:hint="Tag"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <Button
+                        android:background="@color/colorBlink"
+                        android:id="@+id/btn_add"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="20dp"
+                        android:text="ADD"
+                        android:textColor="@color/white"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </FrameLayout>
+
+</RelativeLayout>

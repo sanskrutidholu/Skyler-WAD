@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="10dp">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="rectangle">
+        </shape>
+    </item>
+
+    <item android:gravity="start|center_vertical"
+        android:height="8dp"
+        android:width="8dp"
+        android:drawable="@drawable/white_circle" />
+
+    <item android:gravity="center_vertical"
+        android:drawable="@drawable/white_divider_line"/>
+</layer-list>

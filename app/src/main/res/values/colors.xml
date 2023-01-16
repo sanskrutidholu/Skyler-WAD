@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF6131</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorBlink">#05B8C8</color>
+    <color name="colorAccent">#FFF</color>
+    <color name="colorBgOrange">#FF6131</color>
+    <color name="colorLogoDark">#FF632D</color>
+    <color name="colorLogoLight">#FF8530</color>
+    <color name="colorLogoBg">#1E1E1E</color>
+    <color name="colorSplashBg">#080808</color>
+    <color name="colorEditTextBg">#464646</color>
+    <color name="colorHomeBg">#17202A</color>
+    <color name="grey">#F1EEEE</color>
+
+    <color name="my_spinner_text_color">@color/colorAccent</color>
+
+    <color name="white">#FFF</color>
+    <color name="black">#080808</color>
+
+
+</resources>

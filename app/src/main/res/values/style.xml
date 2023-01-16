@@ -1,0 +1,31 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textViewStyle">@style/TextTheme</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorLogoLight</item>
+        <item name="colorAccent">@color/colorBlink</item>
+    </style>
+
+    <style name="TextTheme" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/calibri</item>
+    </style>
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="mySpinner" parent="Widget.AppCompat.Spinner.DropDown" >
+        <item name="fontFamily">@font/calibri</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="mySpinner2" parent="Widget.AppCompat.Spinner.DropDown" >
+        <item name="fontFamily">@font/calibri</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/my_spinner_text_color</item>
+        <item name="android:textColorHint">@color/my_spinner_text_color</item>
+    </style>
+</resources>
